@@ -1,0 +1,33 @@
+.container {
+  position: absolute;
+  top: 47px;
+  left: 0px;
+  width: 64px;
+  height:100%;
+  text-align: center;
+  background-color: green;
+}
+.container h1 {
+  font-size: 1rem;
+}
+
+.btn {
+  background-color: black;
+  width: 64px;
+  height: 64px;
+  font-size: 2rem;
+  color: white;
+  border: 2px solid;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  border-left: 0px solid;
+  border-color: rgba(255, 153, 0);
+
+}
+
+.divbtn {
+  background-color: black;
+  width: 60px;
+  height: 60px;
+
+}
