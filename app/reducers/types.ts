@@ -1,7 +1,9 @@
 import { Dispatch as ReduxDispatch, Store as ReduxStore, Action } from 'redux';
 
 export type counterStateType = {
-  counter: number;
+  id: number;
+  something: number;
+  x: number;
 };
 
 export type GetState = () => counterStateType;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './Navbar.css';
 import routes from '../../constants/routes.json';
 import LinkButton from '../LinkButton';
@@ -13,9 +12,10 @@ export default function Navbar() {
       <button className={styles.btn} data-tclass="btn" type="button">
         <i className="fas fa-cogs" />
       </button>
-      <button className={styles.btn} data-tclass="btn" type="button">
-        <i className="fas fa-code" />
-      </button>
+      <LinkButton className={styles.btn} to={routes.PROGRAM}>
+        {' '}
+        <i className="fas fa-code btn" />
+      </LinkButton>
       <button className={styles.btn} data-tclass="btn" type="button">
         <i className="fas fa-heartbeat" />
       </button>

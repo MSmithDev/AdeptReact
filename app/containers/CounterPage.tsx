@@ -11,7 +11,7 @@ import { counterStateType } from '../reducers/types';
 
 function mapStateToProps(state: counterStateType) {
   return {
-    counter: state.counter
+    counter: state
   };
 }
 
