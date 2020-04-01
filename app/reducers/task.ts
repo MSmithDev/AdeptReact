@@ -1,4 +1,3 @@
-
 import { test } from '../actions/task';
 
 const initialState = [
@@ -16,12 +15,12 @@ const initialState = [
   },
   {
     id: 2,
-    type: "IO",
+    type: 'IO',
     something: 3,
     x: 15
   },
   {
-    id: 4,
+    id: 3,
     type: 'Move Joint',
     something: 3,
     x: 15
@@ -33,32 +32,32 @@ const initialState = [
     x: 15
   },
   {
-    id: 4,
+    id: 5,
     type: 'Move Joint',
     something: 3,
     x: 15
   },
   {
-    id: 4,
+    id: 6,
     type: 'Move Joint',
     something: 3,
     x: 15
   },
   {
-    id: 4,
-    type: 'Move Joint',
+    id: 7,
+    type: 'Move Liner',
     something: 3,
     x: 15
   },
   {
-    id: 4,
-    type: 'Move Joint',
+    id: 8,
+    type: 'Move Linear',
     something: 3,
     x: 15
   }
 ];
 
-const taskReducer = (state = initialState, action) => {
+const taskReducer = (state = initialState, action: { type: string }) => {
   switch (action.type) {
     case test:
       return { ...state, id: state.id + 1 };

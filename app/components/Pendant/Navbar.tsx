@@ -6,9 +6,10 @@ import LinkButton from '../LinkButton';
 export default function Navbar() {
   return (
     <div className={styles.container} data-tid="container">
-      <button className={styles.btn} data-tclass="btn" type="button">
-        <i className="fas fa-home" />
-      </button>
+      <LinkButton className={styles.btn} to={routes.PENDANT}>
+        {' '}
+        <i className="fas fa-home btn" />
+      </LinkButton>
       <button className={styles.btn} data-tclass="btn" type="button">
         <i className="fas fa-cogs" />
       </button>

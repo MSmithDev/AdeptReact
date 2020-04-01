@@ -9,9 +9,9 @@ export default function RobotTaskContainer() {
 
   return (
     <div className={styles.container}>
-
-      {res.map(items => <RobotTask id={items.id} type={items.type}/>)}
-
+      {res.map((items: { id: number; type: string }) => (
+        <RobotTask key={items.id} id={items.id} type={items.type} />
+      ))}
     </div>
   );
 }
