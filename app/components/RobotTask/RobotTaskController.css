@@ -1,0 +1,16 @@
+.container {
+  position: absolute;
+  top: 48px;
+  left: 560px;
+  width: 230px;
+  height: 200px;
+  background-color: firebrick;
+}
+
+.startBtn {
+  background-color: black;
+  width: 64px;
+  height: 64px;
+  font-size: 2rem;
+  color: white;
+}
