@@ -21,7 +21,7 @@ export default function Navbar() {
         <i className="fas fa-heartbeat" />
       </button>
       <button className={styles.btn} data-tclass="btn" type="button">
-        <i className="fas fa-heartbeat" />
+        <i className="fas fa-server" />
       </button>
       <LinkButton className={styles.btn} to={routes.HOME}>
         {' '}
