@@ -1,12 +1,14 @@
 import { Dispatch as ReduxDispatch, Store as ReduxStore, Action } from 'redux';
 
+type Tasks = {
+  type: string;
+  x: number;
+  something: number;
+  id: number;
+};
+
 export type StateType = {
-  taskReducer: {
-    id: number;
-    type: string;
-    something: number;
-    x: number;
-  };
+  taskReducer: Tasks[];
 
   robotState: {
     robotPosition: {

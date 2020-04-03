@@ -13,8 +13,8 @@ export default function Pendant() {
     <div className={styles.container} data-tid="container">
       <h1>
         Pendant main page
-        {res.id}
-        {res.something}
+        {res[0].id}
+        {res[0].something}
       </h1>
       <h2>
         Robot X:

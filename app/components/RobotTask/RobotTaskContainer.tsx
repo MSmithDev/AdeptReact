@@ -1,11 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import styles from './RobotTaskContainer.css';
 import RobotTask from './RobotTask';
+import { StateType } from '../../reducers/types';
 
 export default function RobotTaskContainer() {
-
-  const res = useSelector(state => state.taskReducer);
+  const res = useSelector((state: StateType) => state.taskReducer);
 
   return (
     <div className={styles.container}>
