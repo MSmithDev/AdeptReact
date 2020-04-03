@@ -60,7 +60,7 @@ const initialState = [
 const taskReducer = (state = initialState, action: { type: string }) => {
   switch (action.type) {
     case test:
-      return { ...state, id: state.id + 1 };
+      return state;
     default:
       return state;
   }

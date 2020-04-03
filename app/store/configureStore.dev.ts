@@ -3,9 +3,10 @@ import thunk from 'redux-thunk';
 import { createHashHistory } from 'history';
 import { routerMiddleware, routerActions } from 'connected-react-router';
 import { createLogger } from 'redux-logger';
+import reduxWebsocket from '@giantmachines/redux-websocket';
 import createRootReducer from '../reducers';
 import * as counterActions from '../actions/counter';
-import { counterStateType } from '../reducers/types';
+import { StateType } from '../reducers/types';
 
 declare global {
   interface Window {
@@ -25,7 +26,7 @@ const history = createHashHistory();
 
 const rootReducer = createRootReducer(history);
 
-const configureStore = (initialState?: counterStateType) => {
+const configureStore = (initialState?: StateType) => {
   // Redux Configuration
   const middleware = [];
   const enhancers = [];
@@ -48,6 +49,11 @@ const configureStore = (initialState?: counterStateType) => {
   const router = routerMiddleware(history);
   middleware.push(router);
 
+  // Websocket Middleware
+  const reduxWebsocketMiddleware = reduxWebsocket({
+    reconnectOnClose: true
+  });
+  middleware.push(reduxWebsocketMiddleware);
   // Redux DevTools Configuration
   const actionCreators = {
     ...counterActions,
